@@ -735,7 +735,7 @@ do
     local juju_text = drawing_proxy["new"]("Text", {
         ["Font"] = 1,
         ["Color"] = color3_fromrgb(255, 255, 255),
-        ["Text"] = "juju",
+        ["Text"] = "Mooze",
         ["Parent"] = logo,
         ["Position"] = udim2_new(1, 5, 0, 3),
         ["Size"] = 14,
@@ -19194,7 +19194,7 @@ do
         menu_references["sleep_rate"] = menu_references["fake_position_settings"]:create_element({["name"] = "sleep rate"}, {["slider"] = {["flag"] = "sleep_rate", ["min"] = 1, ["max"] = 100, ["default"] = 1, ["suffix"] = "%"}})
         menu_references["void_hide"] = menu_references["anti_section"]:create_element({["name"] = "void hide"}, {["toggle"] = {["flag"] = "void_hide"}})
         menu_references["void_hide_settings"] = menu_references["void_hide"]:create_settings()
-        menu_references["void_hide_type"] = menu_references["void_hide_settings"]:create_element({["name"] = "type"}, {["dropdown"] = {["options"] = game["PlaceId"] == 7213786345 and {"vc server"} or {"random", "bait"}, ["flag"] = "void_hide_type", ["requires_one"] = true, ["default"] = game["PlaceId"] == 7213786345 and {"vc server"} or {"random"}}})
+        menu_references["void_hide_type"] = menu_references["void_hide_settings"]:create_element({["name"] = "type"}, {["dropdown"] = {["options"] = game["PlaceId"] ~= 7213786345 and {"vc server"} or {"random", "bait"}, ["flag"] = "void_hide_type", ["requires_one"] = true, ["default"] = game["PlaceId"] ~= 7213786345 and {"vc server"} or {"random"}}})
         menu_references["void_hide_bait_distance"] = menu_references["void_hide_settings"]:create_element({["name"] = "bait distance"}, {["slider"] = {["min"] = 200, ["max"] = 2500, ["decimals"] = 0, ["default"] = 250, ["flag"] = "void_hide_bait_distance", ["suffix"] = " studs"}})
         menu_references["void_hide_bait_cooldown"] = menu_references["void_hide_settings"]:create_element({["name"] = "bait cooldown"}, {["slider"] = {["min"] = 0.01, ["max"] = 1.5, ["decimals"] = 2, ["default"] = 0.5, ["flag"] = "void_hide_bait_cooldown", ["suffix"] = "s"}})
         menu_references["void_hide_bait_time"] = menu_references["void_hide_settings"]:create_element({["name"] = "bait time"}, {["slider"] = {["min"] = 0.01, ["max"] = 0.3, ["decimals"] = 2, ["default"] = 0.03, ["flag"] = "void_hide_bait_time", ["suffix"] = "s"}})
@@ -21984,7 +21984,7 @@ do
         local void_hide_force_when_reloading = false
         local void_hide_force_when_tabbed_out = false
         local void_hide_force_when_not_full_health = false
-        local void_hide_type = game["PlaceId"] == 7213786345 and "vc server" or "random"
+        local void_hide_type = game["PlaceId"] ~= 7213786345 and "vc server" or "random"
 
 
         local isrbxactive = isrbxactive or LPH_NO_VIRTUALIZE(function() return true end)
