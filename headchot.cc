@@ -6021,7 +6021,7 @@ local LightingSettings = {
 
     
     
-    CustomAmbient = Color3.new(0, 0, 0),
+    
     CustomOutdoorAmbient = Color3.new(80, 120, 200),
     CustomExposureCompensation = 0,
     CustomFogStart = 0,
