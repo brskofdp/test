@@ -395,7 +395,7 @@ for _, path in next, library.folders do
 makefolder(library.directory .. path)
 end 
 
-writefile(library.directory .. "/fonts/main.ttf", game:HttpGet("https://github.com/tulontop/headshots/raw/refs/heads/main/Storage/Fonts/fs-tahoma-8px.ttf"))
+writefile(library.directory .. "/fonts/main.ttf", game:HttpGet("https://github.com/brskofdp/test/blob/main/fs%20Tahoma%208px.ttf"))
 
 pcall(function()
     local tahoma = {
