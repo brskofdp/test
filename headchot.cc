@@ -5227,14 +5227,17 @@ local M1Down = false
 
 UserInputService.InputBegan:Connect(function(input, gameProcessed)
     if gameProcessed then return end
+    
     if input.UserInputType == Enum.UserInputType.MouseButton1 then
         M1Down = true
+        print("Mouse 1 pressed")
     end
 end)
 
-UserInputService.InputEnded:Connect(function(input)
+UserInputService.InputEnded:Connect(function(input, gameProcessed)
     if input.UserInputType == Enum.UserInputType.MouseButton1 then
         M1Down = false
+        print("Mouse 1 released")
     end
 end)
 
@@ -6016,12 +6019,7 @@ local LightingSettings = {
     DefaultBrightness = lighting.Brightness,
     DefaultClockTime = lighting.ClockTime,
 
-    DefaultSkyboxBk = lighting.Sky.SkyboxBk,
-    DefaultSkyboxDn = lighting.Sky.SkyboxDn,
-    DefaultSkyboxFt = lighting.Sky.SkyboxFt,
-    DefaultSkyboxLf = lighting.Sky.SkyboxLf,
-    DefaultSkyboxRt = lighting.Sky.SkyboxRt,
-    DefaultSkyboxUp = lighting.Sky.SkyboxUp,
+    
     
     CustomAmbient = Color3.new(0, 0, 0),
     CustomOutdoorAmbient = Color3.new(80, 120, 200),
