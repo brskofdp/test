@@ -5077,10 +5077,10 @@ end
 -- // Custom Assets
 
 -- Pink Shyt Aura
-writefile(library.directory .. "/assets/PinkShyt.rbxm", game:HttpGet("https://github.com/tulontop/headshots/raw/refs/heads/main/Storage/Particles/PinkShyt.rbxm"))
+-- writefile(library.directory .. "/assets/PinkShyt.rbxm", game:HttpGet("https://github.com/tulontop/headshots/raw/refs/heads/main/Storage/Particles/PinkShyt.rbxm"))
 
 -- Walk Steps
-writefile(library.directory .. "/assets/WalkSteps.rbxm", game:HttpGet("https://github.com/tulontop/headshots/raw/refs/heads/main/Storage/Particles/WalkSteps.rbxm"))
+-- writefile(library.directory .. "/assets/WalkSteps.rbxm", game:HttpGet("https://github.com/tulontop/headshots/raw/refs/heads/main/Storage/Particles/WalkSteps.rbxm"))
 
 -- // Custom Commands
 
